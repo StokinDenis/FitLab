@@ -1,0 +1,22 @@
+<header>
+  <div class="fit_logo">
+    <img src="./assets/Filtogo.svg" alt="logo">
+  </div>
+
+  <nav class="wrapper_header_menu">
+    <ul class="header_menu">
+      <li><a routerLink="">Фитнес-услуги</a></li>
+      <li><a routerLink="">Инструкторы</a></li>
+      <li><a routerLink="">Контакты</a></li>
+      <li><a routerLink="">Pасписание</a></li>
+    </ul>
+  </nav>
+
+   <div *ngIf="isAuth$|async; else unauthorized">
+     <img class="header_ava" src="./assets/AvaHeader.svg" alt="ava">
+   </div>
+
+  <ng-template #unauthorized>
+     <fit-outlogin-header></fit-outlogin-header>
+  </ng-template>
+</header>
