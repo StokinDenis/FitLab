@@ -1,0 +1,51 @@
+footer {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright  {
+  color: white;
+}
+
+.icon-line {
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.footer_icon {
+  height: 16px;
+  width: 16px;
+}
+
+.logo_img {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper_content_footer {
+padding: 40px 0;
+}
+
+.follow_us_here {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.copyright{
+ font-weight: 300;
+  font-size: 10px;
+  font-family: 'Manrope', sans-serif;
+}
