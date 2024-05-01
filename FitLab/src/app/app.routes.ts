@@ -9,11 +9,12 @@ import {ContactsPageComponent} from "./components/contacts-page/contacts-page.co
 export const routes: Routes = [
   {
     path: "",
-    component: HomePageComponent,
+    redirectTo: 'HomePage',
+    pathMatch: "full"
   },
   {
-    path: "userPage",
-    component: UserPageComponent,
+    path: "HomePage",
+    component: HomePageComponent,
   },
   {
     path: "schedulePage",
