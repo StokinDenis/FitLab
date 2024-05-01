@@ -4,7 +4,7 @@ import {BehaviorSubject, map, Observable} from "rxjs";
 
 @Injectable({providedIn: "root"})
 export class userStore{
-  private readonly isAuth$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  private readonly isAuth$: BehaviorSubject<boolean> = new BehaviorSubject(true);
 
   public selectIsAuth(): Observable<boolean> {
     return this.isAuth$.asObservable();
