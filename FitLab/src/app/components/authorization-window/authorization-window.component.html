@@ -1,0 +1,28 @@
+<div class="form_create_user">
+<form [formGroup]="formGroup">
+  <div class="slogan">Стань частью Fitlab!</div>
+  <div class="login_window_route">Уже есть аккаунт? <a style="color: black" href="">Войти</a></div>
+  <div class="wrapper_role_selection">
+    <div class="role_selection">
+    <div class="role" (click)="clientLogin()" [ngClass]="{role_active: isClient}">Я клиент</div>
+    <div class="role" (click)="trainerLogin()" [ngClass]="{role_active: isTrainer}">Я тренер</div>
+    </div>
+  </div>
+  <div>
+    <input class="create_input" formControlName="name" type="text" placeholder="Укажите имя">
+  </div>
+  <div>
+    <input class="create_input" formControlName="age" type="text" placeholder="укажите мобильный телефон" maxlength=10>
+
+  </div>
+  <div class="wrapper_registration_button">
+  <button class="registration_button" type="submit">Зарегистрироваться</button>
+  </div>
+  <div class="under_form">
+    Нажимая на кнопку “Зарегистрироваться”, я даю согласие на обработку
+    <div class="under_form2">персональных данных и принимаю правила посещения клубов</div>
+  </div>
+
+
+</form>
+</div>

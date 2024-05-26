@@ -5,6 +5,7 @@ import {SchedulePageComponent} from "./components/schedule-page/schedule-page.co
 import {FitnessTrainerPgeComponent} from "./components/fitness-trainer-pge/fitness-trainer-pge.component";
 import {FitnessServicesPageComponent} from "./components/fitness-services-page/fitness-services-page.component";
 import {ContactsPageComponent} from "./components/contacts-page/contacts-page.component";
+import {AuthorizationWindowComponent} from "./components/authorization-window/authorization-window.component";
 
 export const routes: Routes = [
   {
@@ -31,7 +32,10 @@ export const routes: Routes = [
   {
     path: 'contactsPage',
     component: ContactsPageComponent,
-  }
-
+  },
+  {
+    path: "registration",
+    component: AuthorizationWindowComponent,
+  },
 
 ];
