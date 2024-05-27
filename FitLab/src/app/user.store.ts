@@ -9,4 +9,8 @@ export class userStore{
   public selectIsAuth(): Observable<boolean> {
     return this.isAuth$.asObservable();
   }
+
+  public getIsAuth(): boolean {
+    return this.isAuth$.getValue();
+  }
 }
