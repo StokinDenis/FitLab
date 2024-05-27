@@ -6,7 +6,7 @@ import {FitnessTrainerPgeComponent} from "./components/fitness-trainer-pge/fitne
 import {FitnessServicesPageComponent} from "./components/fitness-services-page/fitness-services-page.component";
 import {ContactsPageComponent} from "./components/contacts-page/contacts-page.component";
 import {AuthorizationWindowComponent} from "./components/authorization-window/authorization-window.component";
-import {authGuardFn, registrGuardFn} from "../app/guard/aus.guards";
+import { registrGuardFn } from "../app/guard/aus.guards";
 export const routes: Routes = [
   {
     path: "",
@@ -20,22 +20,22 @@ export const routes: Routes = [
   {
     path: "schedulePage",
     component: SchedulePageComponent,
-    canActivate: [authGuardFn, ],
+
   },
   {
     path: "trainersPage",
     component: FitnessTrainerPgeComponent,
-    canActivate: [authGuardFn],
+
   },
   {
     path: "fitnessServices",
     component: FitnessServicesPageComponent,
-    canActivate: [authGuardFn, ],
+
   },
   {
     path: 'contactsPage',
     component: ContactsPageComponent,
-    canActivate: [authGuardFn,],
+
   },
   {
     path: "registration",

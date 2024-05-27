@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {Router} from "@angular/router";
+import {routes} from "../../../app.routes";
 
 @Component({
   selector: 'fit-outlogin-header',
@@ -9,5 +11,9 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./outlogin-header.component.scss']
 })
 export class OutloginHeaderComponent {
-
+  public router = inject(Router)
+  openRegistration(): void {
+    console.log('Navigating to registration page');
+    this.router.navigate(['/registration']);
+  }
 }

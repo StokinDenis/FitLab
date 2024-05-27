@@ -11,14 +11,3 @@ export const registrGuardFn:CanActivateFn=()=>{
   return false
 }
 
-export const authGuardFn: CanActivateFn = () => {
-  const authService = inject(userStore);
-  const router = inject(Router);
-
-  if (authService.getIsAuth()) {
-    return true;
-  }
-  void router.navigate(['/registration'])
-
-  return false;
-}
