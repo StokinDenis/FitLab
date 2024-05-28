@@ -1,0 +1,265 @@
+body {
+  font-family: 'Oswald';
+  font-size: 18px;
+  color: #1C1C1E;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 20px 0;
+}
+
+.page{
+  flex: 1 1 auto;
+}
+
+/* для всех объектов, где используется данный класс */
+[class*="__container"] {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+/* PC */
+@media (max-width: 1087px) {
+  [class*="__container"] {
+    max-width: 970px;
+  }
+}
+
+/* TABLET */
+@media (max-width:991.98px) {
+  [class*="__container"] {
+    max-width: 750px;
+  }
+}
+
+/* MOBILE */
+@media (max-width:767.98px) {
+  [class*="__container"] {
+    max-width: none;
+  }
+}
+
+/*---------------INFO-----------------*/
+
+.info{
+  display: flex;
+}
+
+.info__slider {
+  max-width: 81%;
+}
+
+
+.swiper {}
+
+.swiper-container {
+}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.content {
+  position: relative;
+}
+
+.image-content img{
+  max-width: 100%;
+}
+
+.text-content {
+  max-width: 55%;
+  position: absolute;
+  font-weight: 700;
+  color:#fff;
+  letter-spacing: 1%;
+  font-size: 36px;
+  line-height: 1.26;
+  bottom: 6%;
+  left: 4%;
+}
+
+.swiper-pagination{
+  color: #fff !important;
+  margin-left: auto;
+}
+.swiper-pagination-bullets {
+  color:#fff !important;
+}
+
+.swiper-scrollbar {}
+
+
+
+.info__card {
+}
+
+.info__cards-holder{
+  display: grid;
+  row-gap: 17px;
+  grid-template-rows: repeat(3,1fr);
+  margin-left: 20px;
+}
+
+.card {
+  padding: 37px 20px;
+  border-radius: 20px;
+  border: 1px solid #1C1C1E;
+}
+
+.card__counts {
+  font-weight: 400;
+  font-size: 36px;
+  color:#58D8CC;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.card__title {
+  font-family: 'Catamaran';
+  font-weight: 100;
+  letter-spacing: 1%;
+  color:#1C1C1E;
+
+}
+
+/*----------PROGRAMS------------*/
+
+.page__programs {}
+
+.programs {}
+
+.programs__title {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.42;
+  color:#1C1C1E;
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.programs__holder {
+  margin-bottom: 40px;
+}
+
+.list {
+  display: flex;
+  column-gap: 20px;
+}
+
+.item {
+  flex: 0 1 25%;
+}
+
+.item-programs {}
+
+.item-programs__content img {
+  max-width: 100%;
+}
+
+.item-programs__title {}
+
+.programs__button{
+  text-align: center;
+}
+
+.show-more{
+  color:#58D8CC;
+  border: 1px solid #58D8CC;
+  padding: 10px 30px;
+  font-weight: 500px;
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+/*-------------TEXT-BLOCK-------------*/
+
+.page__text-block {
+  padding: 60px 0;
+}
+
+.text-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-block__text {
+  /* flex: 0 1 50%; */
+  line-height: 1.33;
+  letter-spacing: 1%;
+  padding: 30px 0;
+  font-family: 'Catamaran';
+  max-width: 320px;
+}
+
+.text-block__image {
+  /* flex: 0 1 50%; */
+  /* justify-content: end; */
+  /* flex-direction: end; */
+  /* margin: 0 auto; */
+}
+
+.text-block__image img {
+  max-width: 100%;
+}
+
+/*---------------INSTRACTOR------------*/
+
+.instractors__title{
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.42;
+  color: #1C1C1E;
+  text-align: left;
+  margin-bottom: 28px;
+}
+.instractors__holder{
+  margin-bottom: 40px;
+}
+.item-instractors__content{
+  height: 280px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.image{
+  max-width: 100%;
+  width: 315px;
+
+}
+
+.instractors__item-instractors{
+  position: relative;
+}
+
+.instractor{
+  position: absolute;
+  left: 4%;
+  bottom: 10%;
+  color: #fff;
+}
+
+.instractor__name {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.42;
+}
+
+.instractor__experience {
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 1%;
+  margin-bottom: 16px;
+}
+
+.instractor__skill{
+  border: 1px solid #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
