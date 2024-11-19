@@ -12,9 +12,7 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
 export class AuthorizationWindowComponent {
   public formGroup = new FormGroup({
     name: new FormControl<string>("", [Validators.required]),
-    age: new FormControl<number|null>(null, [Validators.required]),
-    description: new FormControl<string>(""),
-    role: new FormControl<string>(""),
+    phone: new FormControl<string>("", [Validators.required]),
   })
 
   public isClient: boolean = false;

@@ -106,68 +106,16 @@
         <h2 class="instractors__title">Наши программы</h2>
         <div class="instractors__holder">
           <ul class="instractors__list list">
-            <li class="instractors__item-instractors item">
+            <li *ngFor="let trainer of trainers" class="instractors__item-instractors item">
               <div class="item-instractors__content">
-                <img class="image" src="./assets/1.jpg" alt="zumba">
+                <img class="image" [src]="trainer.avatar" alt="zumba">
               </div>
               <div class="item-instractors__instractor instractor">
-                <div class="instractor__name">Юлия Краснова</div>
-                <div class="instractor__experience">5+ лет опыта</div>
+                <div class="instractor__name">{{trainer.name}}</div>
+                <div class="instractor__experience">{{trainer.expertise}}</div>
                 <div class="instractor__skills-holder">
-                  <span class="instractor__skill">Stretching</span>
-                  <span class="instractor__skill" >Yoga</span>
-                  <span class="instractor__skill">Pilates</span>
-                </div>
-              </div>
-            </li>
-            <li class="instractors__item-instractors item">
-              <a href="#">
-                <div class="item-instractors__content">
-                  <img class="image"  src="./assets/1.jpg" alt="zumba">
-
-                </div>
-              </a>
-              <div class="item-instractors__instractor instractor">
-                <div class="instractor__name">Юлия Краснова</div>
-                <div class="instractor__experience">5+ лет опыта</div>
-                <div class="instractor__skills-holder">
-                  <span class="instractor__skill">Stretching</span>
-                  <span class="instractor__skill">Yoga</span>
-                  <span class="instractor__skill">Pilates</span>
-                </div>
-              </div>
-            </li>
-            <li class="instractors__item-instractors item">
-              <a href="#">
-                <div class="item-instractors__content">
-                  <img class="image" src="./assets/1.jpg" alt="zumba">
-
-                </div>
-              </a>
-              <div class="item-instractors__instractor instractor">
-                <div class="instractor__name">Юлия Краснова</div>
-                <div class="instractor__experience">5+ лет опыта</div>
-                <div class="instractor__skills-holder">
-                  <span class="instractor__skill">Stretching</span>
-                  <span class="instractor__skill">Yoga</span>
-                  <span class="instractor__skill">Pilates</span>
-                </div>
-              </div>
-            </li>
-            <li class="instractors__item-instractors item">
-              <a href="#">
-                <div class="item-instractors__content">
-                  <img class="image" src="./assets/1.jpg" alt="zumba">
-
-                </div>
-              </a>
-              <div class="item-instractors__instractor instractor">
-                <div class="instractor__name">Юлия Краснова</div>
-                <div class="instractor__experience">5+ лет опыта</div>
-                <div class="instractor__skills-holder">
-                  <span class="instractor__skill">Stretching</span>
-                  <span class="instractor__skill">Yoga</span>
-                  <span class="instractor__skill">Pilates</span>
+                  <span class="instractor__skill">{{trainer.skills[0]}}</span>
+                  <span class="instractor__skill" *ngIf="trainer.skills[1]!=('' || undefined)">{{trainer.skills[1]}}</span>
                 </div>
               </div>
             </li>
@@ -198,4 +146,12 @@
   </div>
 </div>
 <fit-map></fit-map>
+  <app-personal-information></app-personal-information>
 
+
+<!--  <div [ngSwitch]="currentTab">-->
+<!--    <div *ngSwitchCase="'home'">Это главная страница.</div>-->
+<!--    <div *ngSwitchCase="'about'">Это страница о нас.</div>-->
+<!--    <div *ngSwitchCase="'contact'">Это страница контактов.</div>-->
+<!--    <div *ngSwitchDefault>Страница не найдена.</div>-->
+<!--  </div>-->
