@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
 
@@ -6,6 +6,7 @@ import {FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular
   selector: 'app-personal-information',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './personal-information.component.html',
   styleUrls: ['./personal-information.component.scss']
 })

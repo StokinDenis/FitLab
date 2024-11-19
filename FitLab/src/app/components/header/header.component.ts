@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, inject} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {userStore} from "../../user.store";
 import {RouterLink} from "@angular/router";
@@ -7,6 +7,7 @@ import {OutloginHeaderComponent} from "./outlogin-header/outlogin-header.compone
 @Component({
   selector: 'fit-header',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, RouterLink, OutloginHeaderComponent],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']

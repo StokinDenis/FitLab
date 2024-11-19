@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FitMapComponent} from "../fit-map/fit-map.component";
 import {FooterComponent} from "../footer/footer.component";
@@ -9,6 +9,7 @@ import {Trainer} from "../../trainer";
 @Component({
   selector: 'app-home-page',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, FitMapComponent, FooterComponent, HeaderComponent, PersonalInformationComponent],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss']
@@ -16,25 +17,29 @@ import {Trainer} from "../../trainer";
 export class HomePageComponent {
    public trainers:Trainer[]=[
      {
-     name:"Сергей Морозов",
+     name:"Сергей",
+     surname: "Морозов",
      expertise:"5+ лет опыта",
      skills:["YOGA"],
      avatar: "/assets/trainer1.png"
      },
      {
-       name:"Марина Ильина",
+       name:"Марина",
+       surname: "Ильина",
        expertise:"5+ лет опыта",
        skills:["DEEP STRETCH","STRETCH&GO"],
        avatar: "/assets/trainer2.jpg"
      },
      {
-       name:"Михаил Смирнов",
+       name:"Михаил",
+       surname: "Смирнов",
        expertise:"4 года опыта",
        skills:["PUMP","TRX"],
        avatar: "/assets/trainer3.png"
      },
      {
-       name:"Юлия Краснова",
+       name:"Юлия",
+       surname: "Краснова",
        expertise:"5+ лет опыта",
        skills:["YOGA", "PILATES STUDIO"],
        avatar: "/assets/trainer4.jpg"

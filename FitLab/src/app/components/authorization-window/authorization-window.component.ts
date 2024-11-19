@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-authorization-window',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './authorization-window.component.html',
   styleUrls: ['./authorization-window.component.scss']
+
 })
 export class AuthorizationWindowComponent {
   public formGroup = new FormGroup({
