@@ -1,157 +1,158 @@
 <div class="wrapper">
-  <div class="page">
-    <div class="page__container">
-      <div class="page__info info">
-        <div class="info__slider">
-          <div class="swiper swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="content">
-                  <div class="image-content">
-                    <img src="./assets/slide1.jpg" alt="slide 1">
-                  </div>
-                  <div class="text-content">
-                    <p>С нами каждая тренировка может стать для вас новым открытием</p>
-                  </div>
+    <div class="page">
+        <div class="page__container">
+            <div class="page__info info">
+                <div class="info__slider">
+                    <div class="swiper swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <div class="image-content">
+                                        <img src="./assets/slide1.jpg" alt="slide 1" />
+                                    </div>
+                                    <div class="text-content">
+                                        <p>С нами каждая тренировка может стать для вас новым открытием</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <img src="./assets/slide1.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="content">
+                                    <img src="./assets/slide1.jpg" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- кнопочки для перемещения -->
+                        <div class="swiper-pagination"></div>
+                        <!-- скролл -->
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <img src="./assets/slide1.jpg" alt="">
+                <div class="info__cards-holder">
+                    <div class="info__card card">
+                        <div class="card__counts">20+</div>
+                        <span class="card__title">Профессиональных инструкторов</span>
+                    </div>
+                    <div class="info__card card">
+                        <div class="card__counts">6,000+</div>
+                        <span class="card__title">Счастливых клиентов</span>
+                    </div>
+                    <div class="info__card card">
+                        <div class="card__counts">12+</div>
+                        <span class="card__title">Фитнес-программы</span>
+                    </div>
                 </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="content">
-                  <img src="./assets/slide1.jpg" alt="">
-                </div>
-              </div>
             </div>
-            <!-- кнопочки для перемещения -->
-            <div class="swiper-pagination"></div>
-            <!-- скролл -->
-            <div class="swiper-scrollbar"></div>
-          </div>
+            <section class="page__programs programs">
+                <h2 class="programs__title">Наши программы</h2>
+                <div class="programs__holder">
+                    <ul class="programs__list list">
+                        <li class="programs__item-programs item">
+                            <a href="#">
+                                <div class="item-programs__content">
+                                    <img src="./assets/zumba.jpg" alt="zumba" />
+                                </div>
+                            </a>
+                        </li>
+                        <li class="programs__item-programs item">
+                            <a href="#">
+                                <div class="item-programs__content">
+                                    <img src="./assets/zumba.jpg" alt="zumba" />
+                                </div>
+                            </a>
+                        </li>
+                        <li class="programs__item-programs item">
+                            <a href="#">
+                                <div class="item-programs__content">
+                                    <img src="./assets/zumba.jpg" alt="zumba" />
+                                </div>
+                            </a>
+                        </li>
+                        <li class="programs__item-programs item">
+                            <a href="#">
+                                <div class="item-programs__content">
+                                    <img src="./assets/zumba.jpg" alt="zumba" />
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="programs__button">
+                    <button class="programs__show-more show-more">Все программы</button>
+                </div>
+            </section>
+            <div class="page__text-block text-block">
+                <div class="text-block__text">
+                    <p
+                        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.</p
+                    >
+                </div>
+                <div class="text-block__image">
+                    <img src="./assets/image.jpg" alt="image" />
+                </div>
+            </div>
+            <section class="page__instractors instractors">
+                <h2 class="instractors__title">Наши программы</h2>
+                <div class="instractors__holder">
+                    <ul class="instractors__list list">
+                        <li *ngFor="let trainer of trainers" class="instractors__item-instractors item">
+                            <div class="item-instractors__content">
+                                <img class="image" [src]="trainer.avatar" alt="zumba" />
+                            </div>
+                            <div class="item-instractors__instractor instractor">
+                                <div class="instractor__name">{{ getFullName(trainer) }}</div>
+                                <div class="instractor__experience">{{ trainer.expertise }}</div>
+                                <div class="instractor__skills-holder">
+                                    <span class="instractor__skill">{{ trainer.skills[0] }}</span>
+                                    <span class="instractor__skill" *ngIf="trainer.skills[1] != ('' || undefined)">{{
+                                        trainer.skills[1]
+                                    }}</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="programs__button">
+                    <button class="__show-more show-more">Все инструкторы</button>
+                </div>
+            </section>
+            <div class="page__text-block text-block">
+                <div class="text-block__image">
+                    <img src="./assets/image2.jpg" alt="image" />
+                </div>
+                <div class="text-block__text">
+                    <p
+                        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis
+                        unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo.</p
+                    >
+                </div>
+            </div>
         </div>
-        <div class="info__cards-holder">
-          <div class="info__card card">
-            <div class="card__counts">20+</div>
-            <span class="card__title">Профессиональных инструкторов</span>
-          </div>
-          <div class="info__card card">
-            <div class="card__counts">6,000+</div>
-            <span class="card__title">Счастливых клиентов</span>
-          </div>
-          <div class="info__card card">
-            <div class="card__counts">12+</div>
-            <span class="card__title">Фитнес-программы</span>
-          </div>
-        </div>
-      </div>
-      <section class="page__programs programs">
-        <h2 class="programs__title">Наши программы</h2>
-        <div class="programs__holder">
-          <ul class="programs__list list">
-            <li class="programs__item-programs item">
-              <a href="#">
-                <div class="item-programs__content">
-                  <img src="./assets/zumba.jpg" alt="zumba">
+    </div>
+    <fit-map></fit-map>
+    <app-personal-information></app-personal-information>
 
-                </div>
-              </a>
-            </li>
-            <li class="programs__item-programs item">
-              <a href="#">
-                <div class="item-programs__content">
-                  <img src="./assets/zumba.jpg" alt="zumba">
-
-                </div>
-              </a>
-            </li>
-            <li class="programs__item-programs item">
-              <a href="#">
-                <div class="item-programs__content">
-                  <img src="./assets/zumba.jpg" alt="zumba">
-
-                </div>
-              </a>
-            </li>
-            <li class="programs__item-programs item">
-              <a href="#">
-                <div class="item-programs__content">
-                  <img src="./assets/zumba.jpg" alt="zumba">
-
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="programs__button">
-          <button class="programs__show-more show-more">Все программы</button>
-        </div>
-      </section>
-      <div class="page__text-block text-block">
-        <div class="text-block__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde
-            omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
-            inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        </div>
-        <div class="text-block__image">
-          <img src="./assets/image.jpg" alt="image">
-        </div>
-      </div>
-      <section class="page__instractors instractors">
-        <h2 class="instractors__title">Наши программы</h2>
-        <div class="instractors__holder">
-          <ul class="instractors__list list">
-            <li *ngFor="let trainer of trainers" class="instractors__item-instractors item">
-              <div class="item-instractors__content">
-                <img class="image" [src]="trainer.avatar" alt="zumba">
-              </div>
-              <div class="item-instractors__instractor instractor">
-                <div class="instractor__name">{{getFullName(trainer)}}</div>
-                <div class="instractor__experience">{{trainer.expertise}}</div>
-                <div class="instractor__skills-holder">
-                  <span class="instractor__skill">{{trainer.skills[0]}}</span>
-                  <span class="instractor__skill" *ngIf="trainer.skills[1]!=('' || undefined)">{{trainer.skills[1]}}</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="programs__button">
-          <button class="__show-more show-more">Все инструкторы</button>
-        </div>
-      </section>
-      <div class="page__text-block text-block">
-        <div class="text-block__image">
-          <img src="./assets/image2.jpg" alt="image">
-        </div>
-        <div class="text-block__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut
-            perspiciatis unde
-            omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-            ab illo
-            inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-        </div>
-      </div>
-  </div>
+    <!--  <div [ngSwitch]="currentTab">-->
+    <!--    <div *ngSwitchCase="'home'">Это главная страница.</div>-->
+    <!--    <div *ngSwitchCase="'about'">Это страница о нас.</div>-->
+    <!--    <div *ngSwitchCase="'contact'">Это страница контактов.</div>-->
+    <!--    <div *ngSwitchDefault>Страница не найдена.</div>-->
+    <!--  </div>-->
 </div>
-<fit-map></fit-map>
-  <app-personal-information></app-personal-information>
-
-
-<!--  <div [ngSwitch]="currentTab">-->
-<!--    <div *ngSwitchCase="'home'">Это главная страница.</div>-->
-<!--    <div *ngSwitchCase="'about'">Это страница о нас.</div>-->
-<!--    <div *ngSwitchCase="'contact'">Это страница контактов.</div>-->
-<!--    <div *ngSwitchDefault>Страница не найдена.</div>-->
-<!--  </div>-->
