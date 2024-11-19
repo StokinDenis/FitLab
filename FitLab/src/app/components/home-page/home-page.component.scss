@@ -148,6 +148,7 @@ body {
 }
 
 .list {
+  list-style-type: none;
   display: flex;
   column-gap: 20px;
 }
@@ -169,6 +170,7 @@ body {
 }
 
 .show-more{
+  cursor: pointer;
   color:#58D8CC;
   border: 1px solid #58D8CC;
   padding: 10px 30px;
@@ -176,8 +178,6 @@ body {
   border-radius: 30px;
   background-color: #fff;
 }
-
-/*-------------TEXT-BLOCK-------------*/
 
 .page__text-block {
   padding: 60px 0;
