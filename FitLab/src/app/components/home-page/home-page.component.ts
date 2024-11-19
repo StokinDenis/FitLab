@@ -45,5 +45,8 @@ export class HomePageComponent {
             avatar: "/assets/trainer4.jpg",
         },
     ];
-    // currentTab: any;
+
+    public getFullName(trainer: Trainer): string {
+        return trainer.name + " " + trainer.surname;
+    }
 }
